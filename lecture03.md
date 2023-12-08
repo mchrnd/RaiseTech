@@ -1,7 +1,6 @@
 ## 第三回課題報告
 
-アプリケーションの起動
-実行用のシェルファイル：bin/cloud9_dev
+アプリケーションの起動：bin/cloud9_dev
 
 実行後アプリケーション [URL](https://8002d3738f19443dabb9c0ec18bf66c6.vfs.cloud9.ap-northeast-1.amazonaws.com/)
 
@@ -40,8 +39,6 @@ mysql  Ver 8.0.35 for Linux on x86_64 (MySQL Community Server - GPL)
 https://26gram.com/start-stop-mysql　参考
 
 ```
-# Mysqlログイン(-pはパスあり)
-mysql -u root -p
 # Mysqlの起動
 sudo service mysqld start
 # Mysqlの停止
@@ -52,16 +49,21 @@ $ sudo service mysqld restart
 $ sudo service mysqld status
 ```
 
+停止時エラーメッセージ  
+ActiveRecord::ConnectionNotEstablished in FruitsController#index
+
 ### 構成管理ツール
 
-    Bundler version 2.3.14
-    bundle list でインストールしてあるgemパッケージの確認が可能
+ツール：Bundler version 2.3.14  
+使用するGemのバージョン管理ができる  
+GemfileにGemの依存関係が記述されている  
 
 ## 感想
 
 - 作業工程を講座で実行する流れで分からない部分を調べながら行っていたらだいぶかかってしまったが、その分理解は進んだと思う。
 database.ymlなど、最初に自力で調べながら挑戦したときにはわからずにいた部分も改めて手順通り行った際に調べてどの時点で生成されるものなのか等理解度をあげられてよかった。
 アプリケーション起動後、APサーバーについて調べるなかで「ps aux | grep puma」のようなコマンドの記述方法も発見だった。アプリケーション起動中に別の窓で操作を行うのも、はじめはこれで大丈夫なのか、起動中のアプリケーションへの影響はどうなのか、など起動までの構成とは違い少し緊張した。
+
 - yarnのインストールできず長考
     一度はyarn -vでインストールの確認ができた後日改めて確認すると消えている？
     また再インストールさせると失敗している？
@@ -74,6 +76,5 @@ database.ymlなど、最初に自力で調べながら挑戦したときには�
     found 0 vulnerabiliti
     ```
     
-    [公式ドキュメント-インストール](https://chore-update--yarnpkg.netlify.app/ja/docs/install#linux-tab)
-    
+    [公式ドキュメント-インストール](https://chore-update--yarnpkg.netlify.app/ja/docs/install#linux-tab)  
     [参考サイト](https://yularis.com/nvm-permission-error/)で紹介されている通り、一度Nodeをアンインストールしてみてから再度試したら成功した。
