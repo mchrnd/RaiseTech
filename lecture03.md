@@ -36,17 +36,10 @@ rails s
 
 ### DBサーバー
 
-<<<<<<< HEAD
-Mysqlログイン後status確認より
-使用バージョン
-mysql  Ver 8.0.35 for Linux on x86_64 (MySQL Community Server - GPL)
-https://26gram.com/start-stop-mysql　参考
-=======
 Mysqlログイン後status確認より  
 使用バージョン  
 mysql  Ver 8.0.35 for Linux on x86_64 (MySQL Community Server - GPL)  
 [参考](https://26gram.com/start-stop-mysql)
->>>>>>> 5627b794b14bfb5c9ba635d15b17c9c67bee26c8
 
 ```
 # Mysqlログイン(-pはパスあり)
@@ -61,22 +54,14 @@ $ sudo service mysqld restart
 $ sudo service mysqld status
 ```
 サーバー停止時のアプリケーション画面
-<<<<<<< HEAD
-![image3](![Alt text](images/lecture03-image03.png)
-=======
 ![image3](images/lecture03-image03.png)
->>>>>>> 5627b794b14bfb5c9ba635d15b17c9c67bee26c8
 
 
 ### 構成管理ツール
 
 Bundler version 2.3.14  
 Gemの依存関係とバージョン管理するためのツール
-<<<<<<< HEAD
-$ bundle list　でインストールしてあるgemパッケージの確認が可能
-=======
 $ bundle list　でインストールしてあるgemパッケージの確認が可能  
->>>>>>> 5627b794b14bfb5c9ba635d15b17c9c67bee26c8
 Gemfileにバージョンを指定して記載していく  
 Gemfile.lock というファイルは依存関係を解決した結果をBundllerが自動で書き換えていく
 
@@ -86,13 +71,8 @@ Gemfile.lock というファイルは依存関係を解決した結果をBundlle
 database.ymlなど、最初に自力で調べながら挑戦したときにはわからずにいた部分も改めて手順通り行った際に調べてどの時点で生成されるものなのか等理解度をあげられてよかった。  
 アプリケーション起動後、APサーバーについて調べるなかで「ps aux | grep puma」のようなコマンドの記述方法も発見だった。アプリケーション起動中に別の窓で操作を行うのも、はじめはこれで大丈夫なのか、起動中のアプリケーションへの影響はどうなのか、など起動までの構成とは違い少し緊張した。  
 
-<<<<<<< HEAD
-- Nodoやyarnがうまくインストールされてない？
-Cloud9のインスタンスを再起動するとNodo,yarn,npmあたりが認識していない状態になっていた（ターミナルで-vのバージョン確認で失敗する）
-=======
 - Node.jsやyarnがうまくインストールされてない？
 Cloud9のインスタンスを再起動するとNode.js,yarn,npmあたりが認識していない状態になっていた（ターミナルで-vのバージョン確認で失敗する）
->>>>>>> 5627b794b14bfb5c9ba635d15b17c9c67bee26c8
 $nvm use 17.9.1  
 の実行でインストールしているものがまとめて認識している状態になる
 都度実行するのが手間→nvmの環境パスを通すこと、デフォルト設定を行うことで起動時に作動するように  
